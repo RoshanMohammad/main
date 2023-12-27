@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Audiowide', sans-serif;
+}
+
+body video{
+    object-fit: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -10;
+}
+@media(max-width:900px){
+    body video{
+        object-fit: cover;
+    }
+}
+.main{
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+}
+.home-page{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    gap: 20px;
+}
+.logo span{
+    position: relative;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 60px;
+    background: url(../assests/text-bg.jpg)no-repeat,center,center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.logo span::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background: #fff;
+    bottom: -2px;
+    left: 2px;
+    transition: 0.5s;
+}
+.logo span:hover::after{
+    width: 100%;
+}
+.logo img{
+    border-radius: 50%;
+    border: 1.5px solid #000;
+    outline: 3px solid #fff;
+    width: 70px;
+}
+.nav{
+    position:relative;
+    margin: 50px;
+    display: flex;
+}
+.nav i{
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav ul{
+    display: flex;
+    gap: 20px;
+}
+.nav ul li,a{
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav ul li a:hover{
+    color: #ffffff75;
+}
+.r-nav{
+    backdrop-filter: blur(15px);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+    display: none;
+    cursor: pointer;
+}
+@media(max-width:900px){
+    .logo img{
+        width:50px;
+    }
+    .logo span{
+        font-size: 30px;
+    }
+    .nav ul li{
+        display: none;
+    }
+    .nav i{
+        display: block;
+    }
+    .r-nav{
+        top: 100px;
+        background: #000;
+        display: block;
+        height: 65vh;
+        display: none;
+        z-index: 100;
+    }
+    .r-nav ul li a{
+        color: #fff;
+    }
+    .r-nav ul li a:hover{
+       color: #ffffff33;
+    }
+
+}
+
+.content{
+    color: #fff;
+    margin: 60px;
+    line-height: 70px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+}
+.content h1{
+    font-size: 60px;
+    cursor: pointer;
+    font-family: 'Audiowide', sans-serif;
+    background: #fff;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 30px;
+}
+
+.content h2,h3{
+    font-size: 60px;
+    padding-top: 30px;
+}
+.myimg{
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    border-bottom: 1px solid #fafafa3a;
+    animation: bounce linear 3s infinite;
+}
+@media(max-width:900px){
+    .content{
+        margin: 0px;
+    }
+    .content h2,h3{
+        font-size: 40px;
+        padding-top: 10px;
+    }   
+    .content h1{
+        font-size: 50px;
+    }
+}
+.myimg img{
+   width: 600px;
+   scale: 1.6;
+   position: absolute;
+   left: -80px;
+   filter: contrast(-2px);
+}
+@media(max-width:900px){
+    .content{
+        flex-direction: column;
+    }
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media(max-width:900px){
+    .content{
+        margin: 30px;
+        line-height: 30px;
+    }
+    .content h2{
+        font-size: 20px;
+    }
+    .content h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .content h3{
+        font-size: 30px;
+        padding-top: 15px;
+        line-height:40px;
+    }
+    .myimg{
+        width: 350px;
+        height: 350px;
+    }
+    .myimg img{
+        left: -120px;
+    }
+}
+
+footer{
+     
+    display: flex;
+    justify-content: center;
+}
+footer i{
+    color: #fff;
+    font-size: 25px;
+    margin: 15px;
+    padding: 15px;
+}
+
+footer i:hover{
+    color: rgba(0, 229, 255, 0.444);
+    position: static;
+}
+
+@media(max-width:900px){
+    footer i{
+        margin: 10px;
+        padding: 5px;
+    }
+    footer{
+        left: 13%;
+    }
+}

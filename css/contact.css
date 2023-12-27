@@ -1,0 +1,49 @@
+.c-contant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+}
+.c-contant h1{
+    color: #fff;
+}
+.c-contant form{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid #fff;
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.c-contant form input{
+    width: 400px;
+    height: 100px;
+    padding-left: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.c-contant form input[type=submit]{
+   flex-grow: 0.9; 
+}
+
+
+@media(max-width:900px){
+    .c-contant form{
+        border: none;
+        width: 100vw;
+    }
+    .c-contant form input[type=submit]{
+        width: 350px;
+    }
+    .c-contant form input[type=submit]:hover{
+        color: #00000074;
+    }
+}
